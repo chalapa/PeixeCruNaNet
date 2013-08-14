@@ -1,0 +1,116 @@
+[
+    {
+        name: "Katsu don",
+        description: "Deep fried pork cutlet in batter with katsu sauce",
+        dishtype: "other",
+        imagesmall: "katz_donburi_small.jpg",
+        image: "katz_donburi_med.jpg"
+    },
+    {
+        name: "Soft shell crab",
+        description: "Deep fried soft shell crab with ponzu sauce",
+        dishtype: "other",
+        imagesmall: "crab_small.jpg",
+        image: "crab_med.jpg"
+    },
+    {
+        name: "Tori Karaage",
+        description: "Deep fried small piece of marinated chicken",
+        dishtype: "other",
+        imagesmall: "garage_small.jpg",
+        image: "garage_med.jpg"
+    },
+    {
+        name: "Spicy Chicken Karaage",
+        description: "Deep fried spicy chicken",
+        dishtype: "other",
+        imagesmall: "kanpungi_small.jpg",
+        image: "kanpungi_med.jpg"
+    },
+    {
+        name: "Tonkatsu Bento",
+        description: "",
+        dishtype: "other",
+        imagesmall: "pork_bento_small.jpg",
+        image: "pork_bento_med.jpg"
+    },
+    {
+        name: "Salmon Teriyaki Bento",
+        description: "",
+        dishtype: "other",
+        imagesmall: "bento_small.jpg",
+        image: "bento_med.jpg"
+    },
+    {
+        name: "Bi Bim Bab",
+        description: "Stone-pot rice with mixed vegetable and egg on top, mild and hot spicy sauce",
+        dishtype: "other",
+        imagesmall: "bibimbap_small.jpg",
+        image: "bibimbap_med.jpg"
+    },
+    {
+        name: "Beef Teriyaki",
+        description: "Grilled rib eye with teriyaki sauce",
+        dishtype: "other",
+        imagesmall: "teriyaki_small.jpg",
+        image: "teriyaki_med.jpg"
+    },
+    {
+        name: "Spider Maki",
+        description: "Deep fried soft shell crab, avocado, omelette, cucumber and tobikko",
+        dishtype: "sushi",
+        imagesmall: "salmon_chobab_small.jpg",
+        image: "salmon_chobab_med.jpg"
+    },
+    {
+        name: "Saba Shio Yaki",
+        description: "Grilled mackerel with sea salt",
+        dishtype: "sushi",
+        imagesmall: "sabasioyaki_small.jpg",
+        image: "sabasioyaki_med.jpg"
+    },
+    {
+        name: "Sashimi",
+        description: "",
+        dishtype: "sushi",
+        imagesmall: "sashimi_small.jpg",
+        image: "sashimi_med.jpg"
+    },
+
+    {
+        name: "Namul",
+        description: "Seasoned, boiled 3 kinds of vegetable with sesame oil",
+        dishtype: "other",
+        imagesmall: "spinach_small.jpg",
+        image: "spinach_med.jpg"
+    },
+    {
+        name: "Tofu and Wakame Salad",
+        description: "Deep fried bean curd and seaweed with salad",
+        dishtype: "other",
+        imagesmall: "tofu_salad_small.jpg",
+        image: "tofu_salad_med.jpg"
+    },
+    {
+        name: "Agedashi Tofu",
+        description: "Deep fried bean curd with sweet soy sauce",
+        dishtype: "other",
+        imagesmall: "tofu_tuigim_small.jpg",
+        image: "tofu_tuigim_med.jpg"
+    },
+    {
+        name: "Tempura",
+        description: "",
+        dishtype: "other",
+        imagesmall: "tuigim_small.jpg",
+        image: "tuigim_med.jpg"
+    },
+    {
+        name: "Gyoza",
+        description: "Pan fried Japanese dumplings (Prawn & Vege)",
+        dishtype: "other",
+        imagesmall: "gyoja_small.jpg",
+        image: "gyoja_med.jpg"
+    }
+
+]
