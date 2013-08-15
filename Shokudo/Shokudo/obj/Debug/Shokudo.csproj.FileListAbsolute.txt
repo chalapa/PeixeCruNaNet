@@ -50,3 +50,5 @@ C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.Razor.
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.csprojResolveAssemblyReference.cache
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.dll
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\DAL.Shokudo.exe
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\DAL.Shokudo.pdb

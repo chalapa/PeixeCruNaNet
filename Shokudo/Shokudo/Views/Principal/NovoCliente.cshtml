@@ -6,32 +6,37 @@
 <h1 style="text-align: center;">Cadastro de Cliente</h1>
 
 <table border='0' background='ffffff' align='center' valign='top' width="88%">
-    <tr style="text-align:center">
+    <tr style="text-align: center">
         <td bgcolor='ffffff' align='top'></div>
             <div class="row" style="margin: 0px 0px 0px 11px">
 
                 <div class="page-header">
                     <h2 id="our-mission">Digite os dados do novo cliente</></h2>
                 </div>
-                <form>
-                    <div class="controls">
-                        <span style="margin-left: 25px;">Nome:</span>
-                        <input class="span5" type="text" placeholder="Nome">
-                    </div>
-                    <div class="controls">
-                        <span style="margin-left: 5px;">Telefone:</span>
-                        <input class="span5" type="text" placeholder="Telefone">
-                    </div>
-                    <div class="controls">
-                        <span style="margin-left: 16px;">Celular:</span>
-                        <input class="span5" type="text" placeholder="Celular">
-                    </div>
-                    <div class="controls">
-                        <span style="margin-left: 85px;">Endereço:</span>
-                        <input class="span5" type="text" placeholder="Endereço">
-                        <button class="btn btn-large btn-primary" type="button" style="margin-left: 9px;">Salvar</button>
-                    </div>
-                </form>
+                @using (Html.BeginForm("SalvarCliente", "Principal", FormMethod.Post,
+                new { @class = "buisinessform" }))
+                {
+                    <form>
+                        <div class="controls">
+                            <span style="margin-left: 25px;">Nome:</span>
+                            <input class="span5" type="text" placeholder="Nome">
+                        </div>
+                        <div class="controls">
+                            <span style="margin-left: 5px;">Telefone:</span>
+                            <input class="span5" type="text" placeholder="Telefone">
+                        </div>
+                        <div class="controls">
+                            <span style="margin-left: 16px;">Celular:</span>
+                            <input class="span5" type="text" placeholder="Celular">
+                        </div>
+                        <div class="controls">
+                            <span style="margin-left: 85px;">Endereço:</span>
+                            <input class="span5" type="text" placeholder="Endereço">
+
+                            <button class="btn btn-large btn-primary" type="button" style="margin-left: 9px;">Salvar</button>
+                        </div>
+                    </form>
+                }
             </div>
         </td>
     </tr>

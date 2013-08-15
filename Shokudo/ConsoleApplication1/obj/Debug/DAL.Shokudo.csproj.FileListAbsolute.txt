@@ -1,0 +1,6 @@
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\bin\Debug\DAL.Shokudo.exe.config
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\bin\Debug\DAL.Shokudo.exe
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\bin\Debug\DAL.Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\obj\Debug\DAL.Shokudo.exe
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\obj\Debug\DAL.Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\ConsoleApplication1\obj\Debug\DAL.Shokudo.csprojResolveAssemblyReference.cache
