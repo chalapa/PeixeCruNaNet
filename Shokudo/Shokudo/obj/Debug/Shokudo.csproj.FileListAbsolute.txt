@@ -24,3 +24,29 @@ C:\Users\pc pf\Documents\GitHub\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Web
 C:\Users\pc pf\Documents\GitHub\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.csprojResolveAssemblyReference.cache
 C:\Users\pc pf\Documents\GitHub\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.dll
 C:\Users\pc pf\Documents\GitHub\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\Shokudo.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\Microsoft.Web.Infrastructure.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\Newtonsoft.Json.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Net.Http.Formatting.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Helpers.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Http.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Http.WebHost.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Mvc.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Razor.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.Deployment.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.Razor.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\Newtonsoft.Json.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Net.Http.Formatting.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Helpers.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Http.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Http.WebHost.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Mvc.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.Razor.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.Deployment.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\System.Web.WebPages.Razor.xml
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.csprojResolveAssemblyReference.cache
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.pdb
