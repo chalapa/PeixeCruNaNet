@@ -48,6 +48,7 @@
       <DependentUpon>DataContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Display.cs" />
     <Compile Include="Entities\Request.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Program.cs" />

@@ -1,10 +1,14 @@
-﻿@{
+﻿@model Shokudo.Models.Cliente
+
+@{
     ViewBag.Title = "NovoCliente";
     Layout = "~/Views/Shared/Master.cshtml";
 }
 
-<h1 style="text-align: center;">Cadastro de Cliente</h1>
+<script src="~/Content/scripts/jquery-1.8.3.min.js"></script>
+<script src="~/Content/scripts/jquery.maskedinput-1.3.min.js"></script>
 
+<h1 style="text-align: center;">Cadastro de Cliente</h1>
 <table border='0' background='ffffff' align='center' valign='top' width="88%">
     <tr style="text-align: center">
         <td bgcolor='ffffff' align='top'></div>
@@ -12,32 +16,113 @@
 
                 <div class="page-header">
                     <h2 id="our-mission">Digite os dados do novo cliente</></h2>
-                </div>
-                @using (Html.BeginForm("SalvarCliente", "Principal", FormMethod.Post,
-                new { @class = "buisinessform" }))
-                {
-                    <form>
-                        <div class="controls">
-                            <span style="margin-left: 25px;">Nome:</span>
-                            <input class="span5" type="text" placeholder="Nome">
-                        </div>
-                        <div class="controls">
-                            <span style="margin-left: 5px;">Telefone:</span>
-                            <input class="span5" type="text" placeholder="Telefone">
-                        </div>
-                        <div class="controls">
-                            <span style="margin-left: 16px;">Celular:</span>
-                            <input class="span5" type="text" placeholder="Celular">
-                        </div>
-                        <div class="controls">
-                            <span style="margin-left: 85px;">Endereço:</span>
-                            <input class="span5" type="text" placeholder="Endereço">
 
-                            <button class="btn btn-large btn-primary" type="button" style="margin-left: 9px;">Salvar</button>
-                        </div>
-                    </form>
-                }
+                    @using (Html.BeginForm("SalvarCliente", "Principal"))
+                    {
+                        <font color="red" ><strong>
+                            @Html.ValidationSummary()
+                       </strong></font>
+                        <table style="margin-left: 73px;">
+                            <tr>
+                                <td>
+                                    <div class="controls">
+                                        @Html.LabelFor(m => m.Name)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.Name)
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="controls" style="margin-left: 12px;">
+                                        @Html.LabelFor(m => m.ReferencePoint)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.ReferencePoint)
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="controls">
+                                        @Html.LabelFor(m => m.Phone)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.Phone)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls" style="margin-left: 12px;">
+                                        @Html.LabelFor(m => m.Cell)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.Cell)
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="controls">
+                                        @Html.LabelFor(m => m.Address)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.Address)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls" style="margin-left: 12px;">
+                                        @Html.LabelFor(m => m.ClienteOK)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls" style="margin-left: -210px; margin-top: -13px;">
+                                        @Html.CheckBoxFor(m => m.ClienteOK)
+                                    </div>
+                                </td>
+                                <td><font size="3" color="red">
+                                    <p style="margin-left: -281px; margin-top: 1px; font-size: 9px; font-size: 9px;">*Check caso esteja inrregular </p></font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="controls">
+                                        @Html.LabelFor(m => m.Complement)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(m => m.Complement)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="controls">
+                                        <input class="btn btn-large btn-primary" type="submit" value="Salvar" style="margin-left: 635px; width: 120px;">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    }
+                </div>
             </div>
         </td>
     </tr>
 </table>
+<script>
+    $(document).ready(function () {
+        $(".telefone").mask("99-9999999");
+    });
+</script>

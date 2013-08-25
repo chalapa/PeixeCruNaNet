@@ -29,20 +29,39 @@ namespace Shokudo.Controllers
         [HttpPost]
         public ActionResult SalvarCliente(Client cliente)
         {
-            DataContextDataContext db = new DataContextDataContext();
-            var cli = new Client
+            if (cliente.Name == null)
             {
-                Name = "Felipe",
-                Phone = 41352118,
-                Adress = "Estrada de São Francisco",
-                Cell = 83170899
-            };
+                ModelState.AddModelError("Nome", "Nome Obrigatório");
+                return View("NovoCliente");
+            }
 
-            db.Clients.InsertOnSubmit(cli);
-            db.SubmitChanges();
+            {
+                DataContextDataContext db = new DataContextDataContext();
+                var cli = new Client
+                {
+                    Name = cliente.Name,
+                    Phone = cliente.Phone,
+                    Address = cliente.Address,
+                    Complement = cliente.Complement,
+                    ReferencePoint = cliente.ReferencePoint,
+                    Cell = cliente.Cell,
+                    ClientOK = cliente.ClientOK
+                };
 
-            return View();
+
+                db.Clients.InsertOnSubmit(cli);
+                db.SubmitChanges();
+                
+            }
+
+            return RedirectToAction("Index");
         }
 
+        //public List<Client> GetClientes()
+        //{
+        //    List<Client> _pvtList = new List<Client>
+
+        //    return View("");
+        //}
     }
 }

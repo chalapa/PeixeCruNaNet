@@ -30,15 +30,15 @@ namespace DAL.Shokudo
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertClient(Client instance);
+    partial void UpdateClient(Client instance);
+    partial void DeleteClient(Client instance);
     partial void InsertRequest(Request instance);
     partial void UpdateRequest(Request instance);
     partial void DeleteRequest(Request instance);
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
-    partial void InsertClient(Client instance);
-    partial void UpdateClient(Client instance);
-    partial void DeleteClient(Client instance);
     #endregion
 		
 		public DataContextDataContext() : 
@@ -71,6 +71,14 @@ namespace DAL.Shokudo
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<Client> Clients
+		{
+			get
+			{
+				return this.GetTable<Client>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Request> Requests
 		{
 			get
@@ -86,13 +94,268 @@ namespace DAL.Shokudo
 				return this.GetTable<User>();
 			}
 		}
+
+        public object query(string selectQueryString)
+        {
+            throw new NotImplementedException();
+        }
+    }
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client")]
+	public partial class Client : INotifyPropertyChanging, INotifyPropertyChanged
+	{
 		
-		public System.Data.Linq.Table<Client> Clients
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ClientID;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _Phone;
+		
+		private string _Address;
+		
+		private System.Nullable<int> _Cell;
+		
+		private string _ReferencePoint;
+		
+		private string _Complement;
+		
+		private System.Nullable<bool> _ClientOK;
+		
+		private EntitySet<Request> _Requests;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnClientIDChanging(int value);
+    partial void OnClientIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnPhoneChanging(System.Nullable<int> value);
+    partial void OnPhoneChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnCellChanging(System.Nullable<int> value);
+    partial void OnCellChanged();
+    partial void OnReferencePointChanging(string value);
+    partial void OnReferencePointChanged();
+    partial void OnComplementChanging(string value);
+    partial void OnComplementChanged();
+    partial void OnClientOKChanging(System.Nullable<bool> value);
+    partial void OnClientOKChanged();
+    #endregion
+		
+		public Client()
+		{
+			this._Requests = new EntitySet<Request>(new Action<Request>(this.attach_Requests), new Action<Request>(this.detach_Requests));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ClientID
 		{
 			get
 			{
-				return this.GetTable<Client>();
+				return this._ClientID;
 			}
+			set
+			{
+				if ((this._ClientID != value))
+				{
+					this.OnClientIDChanging(value);
+					this.SendPropertyChanging();
+					this._ClientID = value;
+					this.SendPropertyChanged("ClientID");
+					this.OnClientIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="Int")]
+		public System.Nullable<int> Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="VarChar(50)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell", DbType="Int")]
+		public System.Nullable<int> Cell
+		{
+			get
+			{
+				return this._Cell;
+			}
+			set
+			{
+				if ((this._Cell != value))
+				{
+					this.OnCellChanging(value);
+					this.SendPropertyChanging();
+					this._Cell = value;
+					this.SendPropertyChanged("Cell");
+					this.OnCellChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReferencePoint", DbType="VarChar(50)")]
+		public string ReferencePoint
+		{
+			get
+			{
+				return this._ReferencePoint;
+			}
+			set
+			{
+				if ((this._ReferencePoint != value))
+				{
+					this.OnReferencePointChanging(value);
+					this.SendPropertyChanging();
+					this._ReferencePoint = value;
+					this.SendPropertyChanged("ReferencePoint");
+					this.OnReferencePointChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Complement", DbType="VarChar(50)")]
+		public string Complement
+		{
+			get
+			{
+				return this._Complement;
+			}
+			set
+			{
+				if ((this._Complement != value))
+				{
+					this.OnComplementChanging(value);
+					this.SendPropertyChanging();
+					this._Complement = value;
+					this.SendPropertyChanged("Complement");
+					this.OnComplementChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientOK", DbType="Bit")]
+		public System.Nullable<bool> ClientOK
+		{
+			get
+			{
+				return this._ClientOK;
+			}
+			set
+			{
+				if ((this._ClientOK != value))
+				{
+					this.OnClientOKChanging(value);
+					this.SendPropertyChanging();
+					this._ClientOK = value;
+					this.SendPropertyChanged("ClientOK");
+					this.OnClientOKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Request", Storage="_Requests", ThisKey="ClientID", OtherKey="ClientID")]
+		public EntitySet<Request> Requests
+		{
+			get
+			{
+				return this._Requests;
+			}
+			set
+			{
+				this._Requests.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Requests(Request entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = this;
+		}
+		
+		private void detach_Requests(Request entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = null;
 		}
 	}
 	
@@ -116,9 +379,9 @@ namespace DAL.Shokudo
 		
 		private string _Comments;
 		
-		private EntityRef<User> _User;
-		
 		private EntityRef<Client> _Client;
+		
+		private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -142,8 +405,8 @@ namespace DAL.Shokudo
 		
 		public Request()
 		{
-			this._User = default(EntityRef<User>);
 			this._Client = default(EntityRef<Client>);
+			this._User = default(EntityRef<User>);
 			OnCreated();
 		}
 		
@@ -295,40 +558,6 @@ namespace DAL.Shokudo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Request", Storage="_User", ThisKey="UserID", OtherKey="UserID", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Requests.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Requests.Add(this);
-						this._UserID = value.UserID;
-					}
-					else
-					{
-						this._UserID = default(int);
-					}
-					this.SendPropertyChanged("User");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Request", Storage="_Client", ThisKey="ClientID", OtherKey="ClientID", IsForeignKey=true)]
 		public Client Client
 		{
@@ -359,6 +588,40 @@ namespace DAL.Shokudo
 						this._ClientID = default(int);
 					}
 					this.SendPropertyChanged("Client");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Request", Storage="_User", ThisKey="UserID", OtherKey="UserID", IsForeignKey=true)]
+		public User User
+		{
+			get
+			{
+				return this._User.Entity;
+			}
+			set
+			{
+				User previousValue = this._User.Entity;
+				if (((previousValue != value) 
+							|| (this._User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._User.Entity = null;
+						previousValue.Requests.Remove(this);
+					}
+					this._User.Entity = value;
+					if ((value != null))
+					{
+						value.Requests.Add(this);
+						this._UserID = value.UserID;
+					}
+					else
+					{
+						this._UserID = default(int);
+					}
+					this.SendPropertyChanged("User");
 				}
 			}
 		}
@@ -567,192 +830,6 @@ namespace DAL.Shokudo
 		{
 			this.SendPropertyChanging();
 			entity.User = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client")]
-	public partial class Client : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ClientID;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _Phone;
-		
-		private string _Adress;
-		
-		private System.Nullable<int> _Cell;
-		
-		private EntitySet<Request> _Requests;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnClientIDChanging(int value);
-    partial void OnClientIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnPhoneChanging(System.Nullable<int> value);
-    partial void OnPhoneChanged();
-    partial void OnAdressChanging(string value);
-    partial void OnAdressChanged();
-    partial void OnCellChanging(System.Nullable<int> value);
-    partial void OnCellChanged();
-    #endregion
-		
-		public Client()
-		{
-			this._Requests = new EntitySet<Request>(new Action<Request>(this.attach_Requests), new Action<Request>(this.detach_Requests));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ClientID
-		{
-			get
-			{
-				return this._ClientID;
-			}
-			set
-			{
-				if ((this._ClientID != value))
-				{
-					this.OnClientIDChanging(value);
-					this.SendPropertyChanging();
-					this._ClientID = value;
-					this.SendPropertyChanged("ClientID");
-					this.OnClientIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(50)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="Int")]
-		public System.Nullable<int> Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adress", DbType="VarChar(50)")]
-		public string Adress
-		{
-			get
-			{
-				return this._Adress;
-			}
-			set
-			{
-				if ((this._Adress != value))
-				{
-					this.OnAdressChanging(value);
-					this.SendPropertyChanging();
-					this._Adress = value;
-					this.SendPropertyChanged("Adress");
-					this.OnAdressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell", DbType="Int")]
-		public System.Nullable<int> Cell
-		{
-			get
-			{
-				return this._Cell;
-			}
-			set
-			{
-				if ((this._Cell != value))
-				{
-					this.OnCellChanging(value);
-					this.SendPropertyChanging();
-					this._Cell = value;
-					this.SendPropertyChanged("Cell");
-					this.OnCellChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Request", Storage="_Requests", ThisKey="ClientID", OtherKey="ClientID")]
-		public EntitySet<Request> Requests
-		{
-			get
-			{
-				return this._Requests;
-			}
-			set
-			{
-				this._Requests.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Requests(Request entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Requests(Request entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
 		}
 	}
 }
