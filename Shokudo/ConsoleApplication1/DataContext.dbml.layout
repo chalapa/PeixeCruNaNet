@@ -2,25 +2,12 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataContext">
   <DataContextMoniker Name="/DataContextDataContext" />
   <nestedChildShapes>
-    <classShape Id="690ecb42-27df-4da2-b47c-83c64c192455" absoluteBounds="1.25, 0.75, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/DataContextDataContext/Client" />
-      <nestedChildShapes>
-        <elementListCompartment Id="5077d99d-735b-408b-9797-f3a6582200bb" absoluteBounds="1.2650000000000001, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="b350c2ac-0665-4a7b-bea7-ae1e281aaf3f" absoluteBounds="4, 1.25, 2, 2.1554996744791666">
       <DataClassMoniker Name="/DataContextDataContext/Request" />
       <nestedChildShapes>
         <elementListCompartment Id="1b284b5a-85f5-49d9-8094-f4cd30e82151" absoluteBounds="4.0150000000000006, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.25 : 2.17390055338542); (4 : 2.17390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataContextDataContext/Client/Client_Request" />
-      <nodes>
-        <classShapeMoniker Id="690ecb42-27df-4da2-b47c-83c64c192455" />
-        <classShapeMoniker Id="b350c2ac-0665-4a7b-bea7-ae1e281aaf3f" />
-      </nodes>
-    </associationConnector>
     <classShape Id="f6473461-1ff3-4303-9157-81d08c4a7e98" absoluteBounds="2.5, 4.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DataContextDataContext/User" />
       <nestedChildShapes>
@@ -34,5 +21,11 @@
         <classShapeMoniker Id="b350c2ac-0665-4a7b-bea7-ae1e281aaf3f" />
       </nodes>
     </associationConnector>
+    <classShape Id="494cc857-8d99-4b97-8c14-66c6cf53629c" absoluteBounds="1, 1.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataContextDataContext/DYF_CLIENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d4cdb2b-72d4-43b0-8bc9-ac5806cbe71d" absoluteBounds="1.0150000000000001, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

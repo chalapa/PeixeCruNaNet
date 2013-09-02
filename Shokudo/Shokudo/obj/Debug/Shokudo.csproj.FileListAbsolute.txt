@@ -52,3 +52,5 @@ C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.dll
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\obj\Debug\Shokudo.pdb
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\DAL.Shokudo.exe
 C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\DAL.Shokudo.pdb
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\EntityFramework.dll
+C:\projetos\Shokudo\PeixeCruNaNet\Shokudo\Shokudo\bin\EntityFramework.xml

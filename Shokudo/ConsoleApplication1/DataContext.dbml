@@ -1,18 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShukudoProject" Class="DataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=PC\SQLEXPRESS;Initial Catalog=ShukudoProject;Integrated Security=True" SettingsObjectName="DAL.Shokudo.Properties.Settings" SettingsPropertyName="ShukudoProjectConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Client" Member="Clients">
-    <Type Name="Client">
-      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Cell" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ReferencePoint" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Complement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="ClientOK" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="Client_Request" Member="Requests" ThisKey="ClientID" OtherKey="ClientID" Type="Request" />
-    </Type>
-  </Table>
   <Table Name="dbo.Request" Member="Requests">
     <Type Name="Request">
       <Column Name="RequestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -22,7 +9,6 @@
       <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Value" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Comments" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Client_Request" Member="Client" ThisKey="ClientID" OtherKey="ClientID" Type="Client" IsForeignKey="true" />
       <Association Name="User_Request" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -34,6 +20,18 @@
       <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="Administrator" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="User_Request" Member="Requests" ThisKey="UserID" OtherKey="UserID" Type="Request" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DYF_CLIENT" Member="DYF_CLIENTs">
+    <Type Name="DYF_CLIENT">
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cell" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReferencePoint" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Complement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClientOk" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

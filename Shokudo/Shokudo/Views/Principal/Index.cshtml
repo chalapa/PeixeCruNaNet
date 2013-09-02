@@ -1,7 +1,11 @@
-﻿@{
+﻿@model IEnumerable<Shokudo.Models.Cliente>
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Master.cshtml";
 }
+
+
 
 <h1 style="text-align: center;">Lista de Clientes</h1>
 <table border='0' background='ffffff' align='center' valign='top' width="88%">
@@ -16,11 +20,56 @@
                     {
                         <form class="form-search">
                             <span>Telefone:</span>
-                            <input type="text"  class="input-medium search-query" />
+                            @*<input type="text" id="searchValue"  class="input-medium search-query" />*@
+                            @Html.TextBox("searchValue")
                             <input type="submit" value="Pesquisar" class="btn" />
                         </form>
                     }
                 </div>
+            <h2>Clientes Cadastrados</h2>
+            <table>
+                    <tr >
+                       
+                        <th style="float:left; margin-left: 1px;">
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th style="float:left; margin-left: 127px;">
+                            @Html.DisplayNameFor(model => model.Phone)
+                        </th>
+                        <th style="float:left; margin-left: 79px;">
+                            @Html.DisplayNameFor(model => model.Cell)
+                        </th>
+                        <th style="float:left; margin-left: 77px;">
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="float:left; width:173px">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td style="float:left; width:144px">
+                                @Html.DisplayFor(modelItem => item.Phone)
+                            </td>
+                            <td style="float:left; width:131px">
+                                @Html.DisplayFor(modelItem => item.Cell)
+                            </td>
+                            <td style="float:left; width:239px">
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }) 
+                                @Html.ActionLink("Delete","Delete", new { id = item.ClientID },new { onclick = "return confirm('Você deseja deletar esse usuário?');" }) |
+                            </td>
+
+                        </tr>
+                    }
+
+                </table>
         </td>
     </tr>
 </table>
+
+
